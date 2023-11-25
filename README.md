@@ -13,9 +13,7 @@ How would a future application obtain the load balancer’s DNS name if it wante
 What aspects need to be considered to make the code work in a CD pipeline (how does it successfully and safely get into production)?
 
 
-# Notes - work in progress
-
-## Solution
+# Solution
 
 ### Prerequisites
 To deploy this project you first need to set these environment variables;
