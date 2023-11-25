@@ -21,6 +21,10 @@ resource "aws_autoscaling_group" "asg" {
   }
 }
 
+resource "aws_autoscaling_attachment" "asg_to_alb" {
+  autoscaling_group_name = aws_autoscaling_group.asg.id
+  elb                    = aws_lb.alb.id
+}
 
 resource "aws_security_group" "asg_sg" {
   name        = "${var.name}-alb-sg"

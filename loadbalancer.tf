@@ -6,11 +6,6 @@ resource "aws_lb" "alb" {
   tags               = local.tags
 }
 
-resource "aws_autoscaling_attachment" "asg_to_alb" {
-  autoscaling_group_name = aws_autoscaling_group.asg.id
-  elb                    = aws_lb.alb.id
-}
-
 resource "aws_security_group" "alb_sg" {
   name        = "${var.name}-alb-sg"
   description = "Security group for Application Load Balancer"
